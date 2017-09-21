@@ -1,10 +1,12 @@
 package com.viacheslavtitov.commoncode.ui;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
 import android.support.design.widget.Snackbar;
 import android.text.Html;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 
 /**
  * Created by Viacheslav Titov on 21.09.2017.
@@ -24,6 +26,12 @@ public class UIUtils {
         Snackbar snackbar = Snackbar.make(rootView, Html.fromHtml(html), Snackbar.LENGTH_LONG);
         snackbar.show();
         return snackbar;
+    }
+
+    public static void showKeyboard(Context context, View view) {
+        final InputMethodManager inputMethodManager = (InputMethodManager) context
+                .getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputMethodManager.showSoftInput(view, InputMethodManager.SHOW_IMPLICIT);
     }
 
     public static Bitmap rotate(Bitmap bitmap, float degrees) {
