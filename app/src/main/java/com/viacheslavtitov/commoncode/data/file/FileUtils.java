@@ -1,4 +1,4 @@
-package com.viacheslavtitov.commoncode.file;
+package com.viacheslavtitov.commoncode.data.file;
 
 import android.content.Context;
 

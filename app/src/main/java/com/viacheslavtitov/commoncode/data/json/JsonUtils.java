@@ -1,4 +1,4 @@
-package com.viacheslavtitov.commoncode.data;
+package com.viacheslavtitov.commoncode.data.json;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
